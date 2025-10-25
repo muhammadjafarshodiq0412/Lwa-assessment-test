@@ -43,18 +43,19 @@ spring.datasource.url=jdbc:h2:file:/Users/jafarshodiq/Documents/database-h2/mydb
 
 Run these in order:
 
-1. **Eureka Server**
-   ```bash
-   ./mvnw spring-boot:run -pl lwa-eureka-service
-   ```
-2. **Product Service**
-   ```bash
-   ./mvnw spring-boot:run -pl lwa-product-service
-   ```
-3. **Order Service**
-   ```bash
-   ./mvnw spring-boot:run -pl lwa-order-service
-   ```
+Please refer to the `README.md` file in each service project to run the services in the correct order:
+
+1. **Eureka Service** – Service discovery server  
+   📂 `lwa-eureka-service/README.md`
+
+2. **Product Service** – Manages items and variants  
+   📂 `lwa-product-service/README.md`
+
+3. **Order Service** – Handles orders and stock updates  
+   📂 `lwa-order-service/README.md`
+
+**Tip:** Always start services in this order: Eureka → Product → Order.
+
 
 ---
 
@@ -66,11 +67,11 @@ Creates a new item with one or more variants.
 
 ### Step 2. Create Order
 POST `/orders`  
-Places an order for one or more product variants.
+Places an order for one or more product variants and adjusts stock levels.
 
 ### Step 3. Complete Order
-PATCH `/orders/{id}/complete`  
-Completes an order and adjusts stock levels.
+PUT `/orders/{id}/complete`  
+Completes an order.
 
 ---
 
