@@ -97,16 +97,11 @@ Completes an order.
 ## 🧪 Testing
 
 Unit tests are provided for:
-- Service layer (`VariantService`, `OrderService`)
+- Service layer (`VariantService`, `OrderService`, `ItemService`)
 - Repository layer (in-memory H2)
-
-Run tests:
-```bash
-./mvnw test
-```
 
 ---
 
 ## 📜 License
 
-This project is for educational and demonstration purposes only.
+This project is for demonstration purposes only.
